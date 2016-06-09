@@ -1,3 +1,5 @@
+package TabbedApp.entity;
+
 import java.sql.Date;
 
 public class User {
@@ -16,6 +18,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", birth_date=" + birth_date.toString() + "}";
+        return "TabbedApp.entity.User{" + "id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", birth_date=" + birth_date.toString() + "}";
     }
 }

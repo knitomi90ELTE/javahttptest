@@ -1,3 +1,5 @@
+package TabbedApp.entity;
+
 public class Guitar {
 
     Integer id;
@@ -14,6 +16,6 @@ public class Guitar {
 
     @Override
     public String toString() {
-        return "Guitar{" + "id=" + id + ", brand=" + brand + ", type=" + type + ", year=" + year + '}';
+        return "TabbedApp.entity.Guitar{" + "id=" + id + ", brand=" + brand + ", type=" + type + ", year=" + year + '}';
     }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<StackPane prefHeight="600.0" prefWidth="800.0" fx:controller="TabbedApp.controllers.MainController" xmlns:fx="http://javafx.com/fxml">
+
+    <TabPane >
+        <tabs>
+            <Tab text="Users" closable="false">
+               <content>
+                   <fx:include source="UsersTab.fxml" ></fx:include>
+               </content>
+            </Tab>
+            <Tab text="Guitars" closable="false">
+                <content>
+                    <fx:include source="GuitarsTab.fxml"></fx:include>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+
+</StackPane>

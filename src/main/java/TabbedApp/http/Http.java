@@ -1,23 +1,9 @@
-import org.apache.http.Header;
-import org.apache.http.HttpHeaders;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.client.methods.RequestBuilder;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicHeader;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+package TabbedApp.http;
 
 public class Http {
-
+    /*
     private static String REQUEST_URL = "http://84.236.114.224/api.php?";
+    private static String AUTHKEY = "QWERASDFYXCV";//for testing
     private static HttpClient client;
 
     public static void init() {
@@ -26,6 +12,7 @@ public class Http {
         headers.add(header);
         client = HttpClients.custom().setDefaultHeaders(headers).build();
     }
+
 
     public static JSONObject doGet(HashMap<String, String> params) {
         try {
@@ -46,12 +33,13 @@ public class Http {
     private static String generateURL(HashMap<String, String> params) {
         Iterator it = params.entrySet().iterator();
         String url = new String(REQUEST_URL);
+        url += "authkey=" + AUTHKEY;
         while (it.hasNext()) {
             HashMap.Entry pair = (HashMap.Entry) it.next();
-            url += "?" + pair.getKey() + "=" + pair.getValue();
+            url += "&" + pair.getKey() + "=" + pair.getValue();
             it.remove();
         }
         return url;
-    }
+    }*/
 
 }
