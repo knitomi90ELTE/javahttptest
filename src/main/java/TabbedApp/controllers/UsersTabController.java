@@ -1,15 +1,20 @@
 package TabbedApp.controllers;
 
-import TabbedApp.api.LoadData;
-import TabbedApp.api.LoadDataCallback;
 import TabbedApp.entity.User;
+import TabbedApp.unirestapi.UnirestLoad;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableView;
 
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class UsersTabController implements Initializable {
+
+    @FXML private TableView tableView;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -17,23 +22,9 @@ public class UsersTabController implements Initializable {
         new Thread(){
             @Override
             public void run() {
-
-                LoadData<User> loadUserData = new LoadData<>();
-                loadUserData.loadAllData(new LoadDataCallback<User>() {
-                    @Override
-                    public void onSuccess(ArrayList<User> data) {
-
-                        System.out.println(data.getClass());
-                        Thread.currentThread().interrupt();
-
-                    }
-
-                    @Override
-                    public void onError(String message) {
-                        Thread.currentThread().interrupt();
-                    }
-                }, User.class);
-
+                List<User> users = UnirestLoad.getUsers();
+                ObservableList<User> obsUsers = FXCollections.observableArrayList(users);
+                tableView.setItems(obsUsers);
 
             }
         }.start();

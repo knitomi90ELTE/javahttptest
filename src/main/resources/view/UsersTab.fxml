@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
 <StackPane prefHeight="600.0" prefWidth="800.0" fx:controller="TabbedApp.controllers.UsersTabController" xmlns:fx="http://javafx.com/fxml">
 
-    <Label>USERS</Label>
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn text="ID">
+                <cellValueFactory><PropertyValueFactory property="p_id"></PropertyValueFactory></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="First Name">
+                <cellValueFactory><PropertyValueFactory property="p_first_name"></PropertyValueFactory></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Last Name">
+                <cellValueFactory><PropertyValueFactory property="p_last_name"></PropertyValueFactory></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Birth Date">
+                <cellValueFactory><PropertyValueFactory property="p_birth_date"></PropertyValueFactory></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
 
 </StackPane>
