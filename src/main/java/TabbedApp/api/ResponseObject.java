@@ -4,8 +4,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 import org.parceler.Parcel;
 
-@Parcel
-public class ResponseObject {
+//@Parcel
+public class ResponseObject<T> {
 
     @SerializedName("success")
     Boolean success;

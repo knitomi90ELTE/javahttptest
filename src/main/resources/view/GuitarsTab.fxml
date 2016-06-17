@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.control.Label?>
-<StackPane prefHeight="600.0" prefWidth="800.0">
+<StackPane prefHeight="600.0" prefWidth="800.0" fx:controller="TabbedApp.controllers.GuitarsTabController" xmlns:fx="http://javafx.com/fxml">
 
     <Label>GUITARS</Label>
 

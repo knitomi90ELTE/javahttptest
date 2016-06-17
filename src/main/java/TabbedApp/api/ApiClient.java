@@ -21,6 +21,7 @@ public class ApiClient {
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
+
             api = restAdapter.create(Api.class);
         }
         return api;

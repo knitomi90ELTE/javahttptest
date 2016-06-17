@@ -7,6 +7,10 @@ public class Guitar {
     String type;
     Integer year;
 
+
+    public Guitar() {
+    }
+
     public Guitar(Integer id, String brand, String type, Integer year) {
         this.id = id;
         this.brand = brand;
